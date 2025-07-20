@@ -1,0 +1,580 @@
+/* General Styling */
+body {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-color: #f8faff; /* Light background similar to screenshots */
+    color: #333;
+    line-height: 1.6;
+}
+
+.highlight {
+    color: #007bff; /* Blue for highlighted text */
+}
+
+/* Header and Navigation */
+header {
+    background-color: #ffffff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+    padding: 15px 0;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* MODIFIED LOGO STYLE */
+.navbar .logo {
+    font-size: 28px; /* Slightly larger */
+    font-weight: 700;
+    color: #ffffff; /* Text color is a fallback, but gradient will override */
+    display: flex;
+    align-items: center;
+    background: linear-gradient(135deg, #007bff, #6dd5ed); /* More dynamic gradient */
+    -webkit-background-clip: text; /* Clip background to text */
+    -webkit-text-fill-color: transparent; /* Make text transparent to show background */
+    background-clip: text;
+    color: transparent; /* Standard property for transparent text */
+    transition: all 0.3s ease; /* Smooth transition for potential future hovers */
+}
+
+.navbar .logo i {
+    margin-right: 10px;
+    font-size: 32px; /* Larger icon */
+    background: linear-gradient(135deg, #007bff, #6dd5ed); /* Apply same gradient to icon */
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    color: transparent;
+}
+
+
+.nav-links {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+.nav-links li {
+    margin-left: 30px;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: #555;
+    font-weight: 600;
+    transition: color 0.3s ease;
+}
+
+.nav-links a:hover,
+.nav-links a.active {
+    color: #007bff;
+}
+
+.feedback-button {
+    background: linear-gradient(to right, #007bff, #00c6ff); /* Gradient blue */
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.feedback-button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Section Common Styles */
+section {
+    padding: 80px 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+section h1,
+section h2 {
+    font-size: 48px;
+    margin-bottom: 20px;
+    font-weight: 700;
+    color: #2c3e50; /* Darker heading color */
+}
+
+section p {
+    font-size: 18px;
+    color: #666;
+    margin-bottom: 40px;
+}
+
+/* Hero Section */
+.hero-section {
+    padding-top: 100px;
+    text-align: center;
+}
+
+.hero-section h1 {
+    font-size: 56px;
+    line-height: 1.1;
+}
+
+.hero-section p {
+    max-width: 800px;
+    margin: 0 auto 50px auto;
+}
+
+.share-experience-button {
+    background: linear-gradient(to right, #007bff, #00c6ff);
+    color: white;
+    border: none;
+    padding: 15px 30px;
+    border-radius: 50px;
+    cursor: pointer;
+    font-size: 18px;
+    font-weight: 600;
+    box-shadow: 0 8px 15px rgba(0, 123, 255, 0.3);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    margin-bottom: 80px;
+}
+
+.share-experience-button:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 12px 20px rgba(0, 123, 255, 0.4);
+}
+
+.cards-container {
+    display: flex;
+    justify-content: space-around;
+    gap: 30px;
+    flex-wrap: wrap;
+}
+
+.card {
+    background-color: #ffffff;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+    padding: 40px;
+    width: calc(33% - 40px);
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    min-width: 280px; /* Ensure cards don't get too small */
+}
+
+.card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.12);
+}
+
+.icon-circle {
+    width: 70px;
+    height: 70px;
+    background-color: #e6f2ff; /* Light blue background for icon */
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto 20px auto;
+    font-size: 30px;
+    color: #007bff;
+}
+
+.card h3 {
+    font-size: 24px;
+    margin-bottom: 15px;
+    color: #2c3e50;
+}
+
+.card p {
+    font-size: 16px;
+    color: #666;
+    margin-bottom: 0;
+}
+
+/* Card specific colors for icons */
+.card:nth-child(1) .icon-circle { color: #007bff; background-color: #e6f2ff; } /* Blue */
+.card:nth-child(2) .icon-circle { color: #28a745; background-color: #e6fae8; } /* Green */
+.card:nth-child(3) .icon-circle { color: #ffc107; background-color: #fff9e6; } /* Orange */
+
+
+/* About Section */
+.about-section {
+    background-color: #ffffff;
+    padding: 80px 20px;
+    margin-top: 50px;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+}
+
+.about-section .about-intro {
+    max-width: 900px;
+    margin: 0 auto 60px auto;
+}
+
+.about-content {
+    display: flex;
+    justify-content: space-between;
+    gap: 40px;
+    text-align: left;
+    flex-wrap: wrap;
+}
+
+.our-mission,
+.why-choose-us {
+    flex: 1;
+    min-width: 300px; /* Adjust for smaller screens */
+}
+
+.our-mission h3,
+.why-choose-us h3 {
+    font-size: 28px;
+    color: #2c3e50;
+    margin-bottom: 20px;
+}
+
+.our-mission p {
+    font-size: 16px;
+    color: #666;
+    margin-bottom: 20px;
+}
+
+.stats {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 30px;
+    font-weight: 700;
+    color: #007bff;
+}
+
+.stat-item {
+    font-size: 24px;
+    text-align: center;
+    flex: 1;
+}
+
+.stat-item br {
+    display: block;
+    margin-bottom: 5px;
+}
+
+.stat-item:first-child { color: #007bff; } /* Blue */
+.stat-item:nth-child(2) { color: #28a745; } /* Green */
+.stat-item:last-child { color: #ffc107; } /* Orange */
+
+
+.why-choose-us ul {
+    list-style: none;
+    padding: 0;
+}
+
+.why-choose-us li {
+    font-size: 16px;
+    color: #666;
+    margin-bottom: 15px;
+    display: flex;
+    align-items: flex-start;
+}
+
+.why-choose-us li i {
+    color: #28a745; /* Green checkmark */
+    margin-right: 10px;
+    font-size: 20px;
+    margin-top: 2px;
+}
+
+/* Contact Section */
+.contact-section {
+    background-color: #f8faff;
+    padding: 80px 20px;
+}
+
+.contact-channels {
+    display: flex;
+    justify-content: space-around;
+    gap: 30px;
+    flex-wrap: wrap;
+}
+
+.channel-card {
+    background-color: #ffffff;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+    padding: 40px;
+    width: calc(33% - 40px);
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    min-width: 280px;
+}
+
+.channel-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.12);
+}
+
+.channel-card .icon-circle {
+    margin-bottom: 20px;
+}
+
+.channel-card h3 {
+    font-size: 24px;
+    margin-bottom: 15px;
+    color: #2c3e50;
+}
+
+.channel-card p {
+    font-size: 16px;
+    color: #666;
+    margin-bottom: 20px;
+}
+
+.channel-card a,
+.start-chat-button {
+    display: inline-block;
+    text-decoration: none;
+    color: #007bff;
+    font-weight: 600;
+    font-size: 16px;
+    transition: color 0.3s ease;
+}
+
+.channel-card a:hover {
+    text-decoration: underline;
+}
+
+.start-chat-button {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 12px 25px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.start-chat-button:hover {
+    background-color: #0056b3;
+}
+
+
+/* Feedback Section */
+.feedback-section {
+    background-color: #ffffff;
+    padding: 80px 20px;
+    margin-top: 50px;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+}
+
+.feedback-section h2 {
+    margin-bottom: 15px;
+}
+
+.feedback-section p {
+    max-width: 800px;
+    margin: 0 auto 50px auto;
+}
+
+/* No form-specific styling needed here anymore for the old custom form */
+
+
+/* Footer */
+footer {
+    background-color: #2c3e50; /* Dark blue similar to screenshot */
+    color: white;
+    padding: 40px 20px;
+    text-align: center;
+    margin-top: 50px;
+}
+
+.footer-content {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* MODIFIED LOGO STYLE */
+footer .logo {
+    font-size: 32px; /* Slightly larger */
+    font-weight: 700;
+    color: #ffffff; /* Text color is a fallback, but gradient will override */
+    display: flex;
+    align-items: center;
+    background: linear-gradient(135deg, #007bff, #6dd5ed); /* More dynamic gradient */
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    color: transparent;
+    margin-bottom: 20px; /* Increased margin for better spacing */
+}
+
+footer .logo i {
+    margin-right: 10px;
+    font-size: 36px; /* Larger icon */
+    background: linear-gradient(135deg, #007bff, #6dd5ed);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    color: transparent;
+}
+
+
+footer p {
+    font-size: 16px;
+    color: #bbb;
+    margin-bottom: 10px;
+}
+
+/* Responsive Design */
+@media (max-width: 992px) {
+    .navbar {
+        flex-direction: column;
+        padding-bottom: 15px;
+    }
+    .nav-links {
+        margin-top: 15px;
+        margin-bottom: 15px;
+    }
+    .nav-links li {
+        margin: 0 15px;
+    }
+
+    .hero-section h1 {
+        font-size: 48px;
+    }
+
+    .cards-container,
+    .contact-channels {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .card,
+    .channel-card {
+        width: 90%;
+        margin-bottom: 20px;
+    }
+
+    .about-content {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .our-mission,
+    .why-choose-us {
+        width: 90%;
+        margin-bottom: 40px;
+    }
+
+    /* No form-specific responsive styling needed for the old custom form */
+}
+
+@media (max-width: 768px) {
+    section {
+        padding: 60px 15px;
+    }
+
+    section h1,
+    section h2 {
+        font-size: 38px;
+    }
+
+    section p {
+        font-size: 16px;
+    }
+
+    .hero-section h1 {
+        font-size: 40px;
+    }
+
+    .feedback-button {
+        padding: 8px 15px;
+        font-size: 14px;
+    }
+
+    .share-experience-button { /* Only for this specific button, no form submit button anymore */
+        padding: 12px 25px;
+        font-size: 16px;
+    }
+
+    .card,
+    .channel-card {
+        padding: 30px;
+    }
+
+    .card h3,
+    .channel-card h3 {
+        font-size: 20px;
+    }
+
+    .icon-circle {
+        width: 60px;
+        height: 60px;
+        font-size: 26px;
+    }
+
+    .stats {
+        flex-direction: column;
+        gap: 20px;
+        align-items: center;
+    }
+
+    .stat-item {
+        font-size: 20px;
+        width: 100%;
+    }
+
+    .why-choose-us li {
+        font-size: 15px;
+    }
+}
+
+@media (max-width: 480px) {
+    .navbar .logo {
+        font-size: 20px;
+    }
+    .navbar .logo i {
+        font-size: 24px;
+    }
+
+    .nav-links {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 10px;
+    }
+    .nav-links li {
+        margin: 0;
+    }
+
+    .hero-section h1 {
+        font-size: 32px;
+    }
+
+    .card,
+    .channel-card {
+        width: 100%;
+        padding: 25px;
+    }
+
+    .our-mission,
+    .why-choose-us {
+        width: 100%;
+    }
+
+    footer .logo {
+        font-size: 24px;
+    }
+    footer .logo i {
+        font-size: 28px;
+    }
+}
